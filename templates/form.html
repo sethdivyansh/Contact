@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        
+        .main{
+            margin-bottom:20px;
+            /* font-size:18px; */
+            font-style:normal;
+            color:#002f6b;
+        }
+        input{
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+            color: #495057;
+            margin-bottom: 4px;
+            max-width: 100%;
+            width: 100%;
+        }
+        textarea{
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+            color: #495057;
+            margin-bottom: 4px;
+            max-width: 100%;
+            width: 100%;
+        }
+        #f_name, #l_name{
+            width: 50%;
+        }
+        input:focus, textarea:focus{
+            outline-color: #80bdff;
+        }
+    </style>
+</head>
+<body class="w-[100vw] h-[100vh] flex justify-center flex flex-row items-center bg-[#f4f9ff] font-sans">
+    <div class = "flex flex-col md:w-[55%] sm:w-[80%] w-[90%] h-[90%] bg-white rounded-lg h-auto">
+        <div class="h-[8vh] text-4xl bg-[#7c56ff] rounded-t-md">
+            <h2 class="p-2.5 text-[#ffffff] text-[35px] pl-[30px] font-sans-serif" >Contact Form</h2>
+        </div>
+
+        <form class = "flex flex-col flex-1 pt-[40px] pr-[50px] pb-[30px] pl-[50px]" action="/submit" method="post">
+            <!-- <div> -->
+                <div class = "flex flex-row gap-[15px]">
+                    <div class="main" id="f_name">
+                        <p class="mb-[5px]">First Name</p>
+                        <input name="first_name" id="first-name" class="p-[3px] pl-[10px]" type = "text" placeholder = "First Name">
+                    </div>
+                    
+                    <div class="main" id="l_name">
+                        <p class="mb-[5px]">Last Name</p>
+                        <input name="last_name" class="p-[3px] pl-[10px]" type = "text" placeholder = "Last Name">
+                    </div>
+                </div>
+
+                <div class="main">
+                    <div class="flex flex-row"><p style="color: red;">* </p>
+                        <p class="mb-[5px]">Email</p>
+                    </div>
+                    
+                    <input name = "mail" class="p-[3px] pl-[10px]" type="email" placeholder="Email Address">
+                </div>
+
+                <div class="main">
+                    <p class="mb-[5px]">Subject</p>
+                    <input name = "subject" class="p-[3px] pl-[10px]" type = "text" placeholder = "Subject">
+                </div>
+
+                <div class="main">
+                    <div class="flex flex-row">
+                        <p style="color: red;">* </p>
+                        <p class="mb-[5px]">Your Message</p>
+                    </div>
+                    <textarea name = "message" rows= "4" column= "2" class="p-[3px] pl-[10px]" type="text" placeholder = "Your Message"></textarea>
+                </div>
+
+                <div class = "main">
+                    <button type="submit" class="bg-[#3f9eff] text-[white] rounded-[4px] w-[75px] h-[32px] hover:bg-[#0171ff]">Submit</button>
+                </div>
+            <!-- </div> -->
+            </form>
+    </div>
+</body>
+</html>
